@@ -1,0 +1,19 @@
+{
+  "name": "jobbari",
+  "version": "1.0.0",
+  "description": "jobbari server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "pesonen.heikki@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "db": "^1.0.6",
+    "lodash": "^4.13.1",
+    "mysql": "^2.10.2",
+    "password-hash": "^1.2.2",
+    "restify": "^4.1.0",
+    "sequelize": "^3.23.3"
+  }
+}
