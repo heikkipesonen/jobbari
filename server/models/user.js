@@ -9,13 +9,6 @@ const Feedback = require('./feedback');
 const hash = require('password-hash');
 
 const User = db.define('user', {
-  // type: {
-  //   type: Sequelize.STRING,
-  //   field: 'type',
-  //   validate: {
-  //     isIn: types
-  //   }
-  // },
   id: {
     type: Sequelize.UUID,
     primaryKey: true
@@ -41,36 +34,7 @@ const User = db.define('user', {
   },
   description: {
     type: Sequelize.TEXT
-  },
-  tel: {
-    type: Sequelize.STRING
-  },
-  lat: {
-    type: Sequelize.FLOAT
-  },
-  lng: {
-    type: Sequelize.FLOAT
-  },
-  address: {
-    type: Sequelize.STRING
-  },
-  postal: {
-    type: Sequelize.STRING
-  },
-  city: {
-    type: Sequelize.STRING
   }
-  // tags: {
-  //   field: 'tags',
-  //   type: Sequelize.TEXT,
-  //   set: function (value) {
-  //     return this.setDataValue('tags', value ? value.join(',') : '');
-  //   },
-  //   get: function() {
-  //     var value = this.getDataValue('tags');
-  //     return value ? value.split(',') : [];
-  //   }
-  // }
 }, {
   freezeTableName: true,
   timestamps: true,

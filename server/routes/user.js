@@ -26,6 +26,28 @@ server.get('/user', function (req, res, next) {
   });
 });
 
+/**
+ * find user by id
+ * @param  {[type]} '/user/:id' [description]
+ * @param  {[type]} function    (req,         res, next [description]
+ * @return {[type]}             [description]
+ */
+server.get('/user/:id', function (req, res, next) {
+  User.find({
+    where: {
+      id: req.params.id
+    },
+    attributes: ['id', 'name', 'description'],
+    include: [
+      {
+        model: Company
+      }
+    ]
+  }).then((response) => {
+    res.send(200, response);
+  });
+});
+
 
 /**
  * create new user
