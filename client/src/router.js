@@ -1,14 +1,20 @@
 import Vue from 'vue'
 import Vuerouter from 'vue-router'
-import Canvas from './components/canvas'
+
+import Register from './views/register'
+import Login from './views/login'
 
 Vue.use(Vuerouter)
 /* eslint-disable no-new */
 const router = new Vuerouter({
   routes: [
     {
-      path: '/',
-      component: Canvas
+      path: '/login',
+      component: Login
+    },
+    {
+      path: '/register',
+      component: Register
     }
   ]
 })
