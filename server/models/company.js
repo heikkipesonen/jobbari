@@ -6,6 +6,7 @@ const Sequelize = require('sequelize');
 const Company = db.define('company', {
   id: {
     type: Sequelize.UUID,
+    defaultValue: Sequelize.UUIDV4,
     primaryKey: true
   },
   name: {
